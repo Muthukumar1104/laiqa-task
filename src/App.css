@@ -9,14 +9,20 @@
   width: 100%;  
 }
 
-.header > ul {
-  width: auto;
+.header ul {
 	list-style-type: none;
 	background-color:white;
 	padding:20px;
 }
 
-.header > ul a{
+.welcome{
+  margin-left: 50px;
+  color: darkblue;
+  font-style: italic;
+  font-size: larger;
+}
+
+.header ul a{
   text-decoration:none;
   color: black;
   font-weight: bold;
@@ -26,7 +32,7 @@
   background-color: white;
 }
 
-.header > ul li{
+.header ul li{
   display:inline;
   padding:20px; 
 }
@@ -35,6 +41,10 @@
 font-size: 30px;
 font-weight:500;
 font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.company_name a{
+  margin-left: -300px;
 }
 
 .shop{
@@ -46,6 +56,18 @@ font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans 
   border: none;
 }
 
+.shop::after{
+  content: '';
+  width: 0px;
+  height: 1px;
+  display: block;
+  background: black;
+  transition: 300ms;
+}
+
+.shop:hover::after {
+  width: 98%;
+}
 
 .header a{
  float: right;
@@ -108,7 +130,7 @@ margin-top: 30px;
 }
 
 .add_btn span{
-  margin-left: 315px;
+  margin-left: 290px;
 }
 
 .cart_btn{
@@ -191,7 +213,7 @@ padding: 5px 7px 5px 10px;
   margin-right: 300px auto;
   width: 1050px;
   height: 1200px;
-  background:url(slide1.png);
+  background:url(images/slide1.png);
   background-repeat: no-repeat;
   background-size: 600px;
   margin-top: 10px;
@@ -200,22 +222,22 @@ padding: 5px 7px 5px 10px;
 
 @keyframes slide {
   25%{
-    background: url(slide1.png);
+    background: url(images/slide1.png);
     background-repeat: no-repeat;
     background-size: 600px;
   }
   50%{
-    background: url(slide2.png);
+    background: url(images/slide2.png);
     background-repeat: no-repeat;
     background-size: 600px;
   }
   75%{
-    background: url(slide3.png);
+    background: url(images/slide3.png);
     background-repeat: no-repeat;
     background-size: 600px;
   }
   100%{
-    background: url(slide4.png);
+    background: url(images/slide4.png);
     background-repeat: no-repeat;
     background-size: 600px;
   }
@@ -452,7 +474,7 @@ padding: 5px 7px 5px 10px;
   border: 2px solid whitesmoke;
 }
 
-input[name="text"]{
+.form input[name="text"]{
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -463,7 +485,7 @@ input[name="text"]{
   background-color: rgb(245, 245, 250);
 }
 
-textarea{
+.form textarea{
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -535,6 +557,10 @@ textarea{
   display: flex;
 }
 
+.icon i{
+  color: #61dafb;
+}
+
 i{
   text-indent: 10px;
   font-size: 36px;
@@ -543,7 +569,7 @@ i{
 .icon a:hover{
   background-color: black;
 }
-/* css */
+
 .sidenav {
   height: 100%;
   width: 0;
@@ -581,4 +607,277 @@ i{
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+/* about */
+
+.about{
+  text-indent: 60px;
+  padding: 100px;
+  line-height: 2;
+}
+
+/* services */
+
+.services{
+  padding: 60px;
+  line-height: 2;
+}
+
+.services h1{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 43px;
+  text-align: center;
+  padding: 40px;
+  font-weight: 495;
+}
+
+.services p{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight:lighter;
+  font-size: 15px;
+  text-indent: 30px;
+}
+
+/* Contact */
+
+.contact_heading{
+  text-align: center;
+  font-size: 23px;
+  padding-top: 100px;
+  font-weight: 300;
+}
+
+.contact{
+  padding: 70px;
+  display: flex;
+}
+
+.contact_form{
+  line-height: 1.6;
+}
+
+.contact label{
+  font-size: 14.5px;
+}
+
+.contact input[name="text"]{
+  padding: 6px 190px 6px 0px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  text-indent: 10px;
+}
+
+.contact input[name="tel"]{
+  padding: 6px 190px 6px 0px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  text-indent: 10px;
+}
+
+.contact textarea{
+  text-indent: 10px;
+  border: 1px solid #ccc;
+}
+
+.contact button{
+  background-color: darkblue;
+  color: white;
+  font-size: 17px;
+  letter-spacing: 1.3px;
+  font-family:Arial, Helvetica, sans-serif;
+  border:none;
+  border-radius: 6px;
+  padding: 10px 30px 10px 30px;
+  margin-top: 10px;
+}
+
+.details{
+  margin-left: 250px;
+  line-height: 1.6;
+}
+
+.details h5{
+  font-size: 14.5px;
+}
+
+.details p{
+  font-size: 14.5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* privacy */
+
+.privacy{
+  padding: 70px;
+  line-height: 2;
+}
+
+.privacy h1{
+  text-align: center;
+  padding: 40px;
+}
+
+.privacy p{
+  text-indent: 20px;
+}
+
+/* Signup */
+
+.signup{
+  padding: 30px 300px 170px 450px;
+  line-height: 1.8;
+  height: 100%;
+  background-color: rgb(237, 237, 243);
+}
+
+.signup .form_signup{
+  padding: 20px;
+  width: 400px;
+  background-color: whitesmoke;
+  border-radius: 20px;
+  border:1px solid white
+}
+
+.signup .form_signup p{
+  margin-top: 7px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.signup .form_signup p a{
+  text-decoration: none;
+}
+
+.signup .form_signup p a:hover{
+  background-color: whitesmoke;
+  color: black;
+}
+
+.signup_heading{
+  text-indent: 150px;
+  margin-bottom: 40px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.signup_heading a{
+  background-color:rgb(237, 237, 243);
+  text-decoration: none;
+  color: black;
+}
+
+.signup label{
+  font-size: 14.5px;
+}
+
+.signup input[name="name"]{
+  padding: 6px 190px 6px 0px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  text-indent: 10px;
+}
+
+.signup input[name="password"]{
+  padding: 6px 190px 6px 0px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  text-indent: 10px;
+}
+
+.signup input[name="cPassword"]{
+  padding: 6px 190px 6px 0px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  text-indent: 10px;
+}
+
+.signup button{
+  background-color: darkblue;
+  color: white;
+  font-size: 17px;
+  letter-spacing: 1.3px;
+  font-family:Arial, Helvetica, sans-serif;
+  border:none;
+  border-radius: 6px;
+  padding: 10px 30px 10px 30px;
+  margin-top: 10px;
+}
+
+/* Login */
+
+.login{
+  padding: 90px 300px 170px 450px;
+  line-height: 1.6;
+  background-color: rgb(237, 237, 243);
+}
+
+.login .form_login{
+  padding: 20px;
+  height: 250px;
+  width: 400px;
+  background-color: whitesmoke;
+  border-radius: 20px;
+  border:1px solid white
+}
+
+.login .form_login p{
+  margin-top: 7px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.login .form_login p a{
+  text-decoration: none;
+}
+
+.login .form_login p a:hover{
+  background-color: whitesmoke;
+  color: black;
+}
+
+.login_heading{
+  text-indent: 150px;
+  margin-bottom: 40px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.login_heading a{
+  background-color:rgb(237, 237, 243);
+  text-decoration: none;
+  color: black;
+}
+
+.login label{
+  font-size: 14.5px;
+}
+
+.login input[name="name"]{
+  padding: 6px 190px 6px 0px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  text-indent: 10px;
+}
+
+.login input[name="password"]{
+  padding: 6px 190px 6px 0px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  text-indent: 10px;
+}
+
+.login button{
+  background-color: darkblue;
+  color: white;
+  font-size: 17px;
+  letter-spacing: 1.3px;
+  font-family:Arial, Helvetica, sans-serif;
+  border:none;
+  border-radius: 6px;
+  padding: 10px 30px 10px 30px;
+  margin-top: 10px;
 }
